@@ -1,10 +1,8 @@
-## vue-toast 
-
------------------------
+## vue-toast
 
 ### Install
 
-`npm install @lanxuexing/vue-toast --save`
+`npm install vue-toast --save`
 
 
 ### Settings

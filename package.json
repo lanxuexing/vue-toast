@@ -1,5 +1,5 @@
 {
-  "name": "@lanxuexing/vue-toast",
+  "name": "vue-toast",
   "version": "0.0.1",
   "description": "this is an information prompt tool on vue",
   "main": "index.js",
