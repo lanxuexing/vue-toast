@@ -20,7 +20,7 @@ There are two different ways to manage a Toast.
 
 ```javascript
 // import plugin
-import Vue2Toast from 'vue2toast';
+import Vue2Toast from '@lanxuexing/vue2toast';
 
 // register plugin on vue
 Vue.use(Vue2Toast)
