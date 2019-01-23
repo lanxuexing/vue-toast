@@ -18,7 +18,7 @@ There are two different ways to manage a Toast.
 
 ##### **Calling api**
 
-```
+```javascript
 // import plugin
 import VueToast from 'vue-toast';
 
