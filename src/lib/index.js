@@ -1,4 +1,4 @@
-import ToastComponent from './vue-toast.vue';
+import ToastComponent from './vue2toast.vue';
 
 let Toast = {};
 Toast.install = function (Vue, options) {
@@ -21,10 +21,10 @@ Toast.install = function (Vue, options) {
                 if (options.hasOwnProperty(key)) {
                     const element = options[key];
                     opt[key] = element;
-                } else if (typeof option == 'function') {
-                    callback = option;
                 }
             }
+        } else if (typeof options == 'function') {
+            callback = options;
         }
         const ToastController = Vue.extend(ToastComponent);
         const instance = new ToastController().$mount(document.createElement('div'));

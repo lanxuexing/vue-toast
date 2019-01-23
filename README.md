@@ -1,8 +1,8 @@
-## vue-toast
+## vue2toast[![npm version](https://badge.fury.io/js/%40lanxuexing%2Fvue2toast.svg)](https://badge.fury.io/js/%40lanxuexing%2Fvue2toast)
 
 ### Install
 
-`npm install vue-toast --save`
+`npm install vue2toast --save`
 
 
 ### Settings
@@ -20,10 +20,10 @@ There are two different ways to manage a Toast.
 
 ```javascript
 // import plugin
-import VueToast from 'vue-toast';
+import Vue2Toast from 'vue2toast';
 
 // register plugin on vue
-Vue.use(VueToast)
+Vue.use(Vue2Toast)
 
 // add a toast on screen
 this.$toast.show("Hello, Toast");
@@ -43,6 +43,6 @@ this.$toast.show("Hello, Toast", function() {
 ### Run example:
 
 ```
-cd ./vue-toast
+cd ./vue2toast
 npm install
 ```

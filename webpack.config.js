@@ -3,9 +3,9 @@ module.exports = {
     entry: './src/lib/index.js',
     output: {
         path: path.join(__dirname, './dist'),
-        filename: 'vue-toast.js',
+        filename: 'vue2toast.js',
         libraryTarget: 'umd',
-        library: 'VueToast'
+        library: 'Vue2Toast'
     },
     module: {
         rules: [
