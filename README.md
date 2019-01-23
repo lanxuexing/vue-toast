@@ -2,7 +2,7 @@
 
 ### Install
 
-`npm install vue2toast --save`
+`npm i @lanxuexing/vue2toast --save`
 
 
 ### Settings
