@@ -2,7 +2,7 @@
   "name": "@lanxuexing/vue2toast",
   "version": "0.0.3",
   "description": "this is an information prompt tool on vue",
-  "main": "index.js",
+  "main": "dist/vue2toast.js",
   "author": "lanxuexing",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,6 +24,7 @@
     "babel-preset-env": "^1.6.0",
     "css-loader": "^0.28.4",
     "node-sass": "^4.5.3",
+    "postcss-loader": "^2.0.6",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "uglifyjs-webpack-plugin": "^0.4.6",
@@ -34,5 +35,10 @@
     "type": "git",
     "url": "https://github.com/lanxuexing/vue2toast.git"
   },
+  "bugs": {
+    "url": "https://github.com/lanxuexing/vue2toast/issues",
+    "email": "geziaihuahua@163.com"
+  },
+  "homepage": "https://github.com/lanxuexing/vue2toast#readme",
   "license": "MIT"
 }

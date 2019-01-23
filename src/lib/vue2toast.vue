@@ -8,6 +8,7 @@
 
 <script>
 export default {
+  name: 'vue2toast',
   data() {
     return {
       visible: false,

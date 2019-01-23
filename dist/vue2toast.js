@@ -88,6 +88,7 @@ return /******/ (function(modules) { // webpackBootstrap
 //
 
 /* harmony default export */ __webpack_exports__["a"] = ({
+  name: 'vue2toast',
   data() {
     return {
       visible: false,
@@ -98,47 +99,57 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ }),
 /* 1 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__vue2toast_vue__ = __webpack_require__(2);
 
 
-let Toast = {};
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var _vue2toast = __webpack_require__(2);
+
+var _vue2toast2 = _interopRequireDefault(_vue2toast);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Toast = {};
 Toast.install = function (Vue, options) {
-    let opt = {
+    var opt = {
         duration: 3000 // 时长
     };
-    let callback = ''; // 回调函数
+    var callback = ''; // 回调函数
 
     // 设置用户自定义配置项
-    for (const key in options) {
+    for (var key in options) {
         if (options.hasOwnProperty(key)) {
-            const element = options[key];
+            var element = options[key];
             opt[key] = element;
         }
     }
 
     Vue.prototype.$toast = function (message, options) {
-        if (typeof options == 'object') {
-            for (const key in options) {
-                if (options.hasOwnProperty(key)) {
-                    const element = options[key];
-                    opt[key] = element;
+        if ((typeof options === 'undefined' ? 'undefined' : _typeof(options)) == 'object') {
+            for (var _key in options) {
+                if (options.hasOwnProperty(_key)) {
+                    var _element = options[_key];
+                    opt[_key] = _element;
                 }
             }
         } else if (typeof options == 'function') {
             callback = options;
         }
-        const ToastController = Vue.extend(__WEBPACK_IMPORTED_MODULE_0__vue2toast_vue__["a" /* default */]);
-        const instance = new ToastController().$mount(document.createElement('div'));
+        var ToastController = Vue.extend(_vue2toast2.default);
+        var instance = new ToastController().$mount(document.createElement('div'));
         instance.message = message;
         instance.visible = true;
         document.body.appendChild(instance.$el);
-        setTimeout(() => {
+        setTimeout(function () {
             instance.visible = false;
-            setTimeout(() => {
+            setTimeout(function () {
                 document.body.removeChild(instance.$el);
                 callback && callback();
             }, 0);
@@ -155,15 +166,16 @@ if (typeof window !== 'undefined' && window.Vue) {
     window.Vue.use(Toast);
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Toast);
+exports.default = Toast;
 
 /***/ }),
 /* 2 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_vue2toast_vue__ = __webpack_require__(0);
-/* unused harmony namespace reexport */
+/* empty harmony namespace reexport */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_4b4fb8b0_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_vue2toast_vue__ = __webpack_require__(9);
 var disposed = false
 function injectStyle (ssrContext) {
@@ -210,7 +222,7 @@ if (false) {(function () {
   })
 })()}
 
-/* harmony default export */ __webpack_exports__["a"] = (Component.exports);
+/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
 
 
 /***/ }),
@@ -234,8 +246,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4b4fb8b0\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/sass-loader/lib/loader.js!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./vue2toast.vue", function() {
-			var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4b4fb8b0\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/sass-loader/lib/loader.js!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./vue2toast.vue");
+		module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4b4fb8b0\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/postcss-loader/lib/index.js!../../node_modules/sass-loader/lib/loader.js!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./vue2toast.vue", function() {
+			var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4b4fb8b0\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/postcss-loader/lib/index.js!../../node_modules/sass-loader/lib/loader.js!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./vue2toast.vue");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});

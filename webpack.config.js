@@ -15,7 +15,7 @@ module.exports = {
                 exclude: /node_modules/,
                 options: {
                     loaders: {
-                        scss: 'style-loader!css-loader!sass-loader'
+                        scss: 'style-loader!css-loader!postcss-loader!sass-loader'
                     }
                 }
             },
@@ -23,9 +23,11 @@ module.exports = {
                 test: /\.js$/,
                 loader: 'babel-loader',
                 include: path.join(__dirname, 'src'),
-                exclude: /node_modules/
+                exclude: /node_modules/,
+                query:{
+                    presets:['env']
+                }
             }
         ]
-    },
-    plugins: []
+    }
 }
