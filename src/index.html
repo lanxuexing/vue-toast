@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vue-Toast Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="../dist/vue-toast.js"></script>
+    <style>
+        .container {
+            margin: 0 auto;
+            width: 980px;
+            background-color: #fff;
+            border: 1px solid #d1d5da;
+            border-radius: 3px;
+        }
+        .content {
+            margin: 0 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="app">
+        <div class="content">
+            <h4>Vue-Toast</h4>
+            <ul>
+                <li>
+                    <a href="javascript:void(0);" @click="defaultToast">默认Toast</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" @click="toast">自定义时长Toast</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            methods: {
+                defaultToast() {
+                    this.$toast('Hello, Default Toast');
+                },
+                toast() {
+                    this.$toast.show('Hello, Custom Toast', {
+                        duration: 5000
+                    });
+                }
+            },
+        });
+    </script>
+</body>
+
+</html>
