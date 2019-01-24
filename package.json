@@ -1,6 +1,6 @@
 {
   "name": "@lanxuexing/vue2toast",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "this is an information prompt tool on vue",
   "main": "dist/vue2toast.js",
   "author": "lanxuexing",
