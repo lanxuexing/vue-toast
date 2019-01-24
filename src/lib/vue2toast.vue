@@ -8,7 +8,6 @@
 
 <script>
 export default {
-  name: 'vue2toast',
   data() {
     return {
       visible: false,
@@ -19,15 +18,8 @@ export default {
 </script>
 
 <style lang='scss'>
-$fontSize: 16px !default;
-@function pxToRem($px) {
-  @return $px / $fontSize * 1rem;
-}
-@function pxToEm($px) {
-  @return $px / $fontSize * 1em;
-}
 .toast-container {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   bottom: 0;
@@ -37,9 +29,9 @@ $fontSize: 16px !default;
   justify-content: center;
   align-items: center;
   .toast {
-    width: pxToRem(180px);
-    height: pxToRem(60px);
-    line-height: pxToRem(60px);
+    width: 180px;
+    height: 60px;
+    line-height: 60px;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.61);
     border-radius: 10px;
@@ -56,7 +48,7 @@ $fontSize: 16px !default;
     animation-fill-mode: both;
   }
   .message {
-    font-size: pxToRem(15px);
+    font-size: 14px;
     color: #fff;
   }
 }
